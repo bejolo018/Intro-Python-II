@@ -1,5 +1,5 @@
 from room import Room
-
+from player import Player
 # Declare all the rooms
 
 room = {
@@ -38,6 +38,9 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player('name', room['outside'])
+print("Welcome to the adventure game!")
+print(f"Your name is {player.name}.")
 
 # Write a loop that:
 #
@@ -49,3 +52,4 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+user = input("[n] Move North ] [s] Move South [e] Move East [w] Move West [q] Quit Game")
